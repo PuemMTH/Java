@@ -6,7 +6,7 @@ public class _work4 {
         try (Scanner sc = new Scanner(System.in)) {
             System.out.print("Enter Number : ");
             int _star = sc.nextInt();
-            for (int i = 1; i <= _star/2; i++) {
+            for (int i = 1; i <= _star/2; i++) { // 7/2 = 3.5
                 for (int j = 1; j <= i; j++) {
                     System.out.print(" ");
                 }

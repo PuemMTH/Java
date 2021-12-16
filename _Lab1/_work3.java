@@ -8,8 +8,8 @@ public class _work3 {
             int reverse, tmp = _int;
             System.out.print("Your Encryptin Code: ");
             while(tmp != 0) {
-                reverse = tmp%10;
-                tmp = tmp/10;
+                reverse = tmp%10; // 321%10 = 1
+                tmp = tmp/10; // 321/10 = 32
                 if(reverse==10){
                     System.out.print(1);
                 }else if(reverse%2==0){
