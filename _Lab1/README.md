@@ -1,3 +1,7 @@
+# This is a Lab 1
+## Lab 1 about moving from c language to java
+
+```JAVA
 import java.util.Scanner;
 
 public class _work1 {
@@ -22,3 +26,4 @@ public class _work1 {
         nextDelively();
     }
 }
+```
