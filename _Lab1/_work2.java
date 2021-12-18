@@ -11,7 +11,7 @@ public class _work2 {
                     STD_ID = sc.next();
                     if(STD_ID.equals("Q")) {
                     check=false;
-                }else{
+                }else{ 
                     System.out.print("Score = ");
                     score = sc.nextFloat();
                     count++;

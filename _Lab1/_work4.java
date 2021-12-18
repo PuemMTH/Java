@@ -28,7 +28,7 @@ public class _work4 {
             }
             System.out.println("Count of star is " + _count);
         }
-    }
+    } 
     public static void main(String[] args) {
         nextStar();
     }

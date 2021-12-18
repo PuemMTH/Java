@@ -17,7 +17,7 @@ public class _work3 {
                 }else if(reverse%2==1){
                     System.out.print(reverse-1);
                 }
-            }
+            } 
         }
     }
     public static void main(String[] args) {

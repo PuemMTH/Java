@@ -14,7 +14,7 @@ public class _work1 {
                     System.out.println("Delivery Fee = " + (nisit_score - 4) * 10 + "Bath.");
                 }else if(nisit_score > 10){
                     System.out.println("Delivery Fee = " + (60 + (nisit_score - 10) * 12) + "Bath.");
-                }
+                } 
             // }
         }
     }
