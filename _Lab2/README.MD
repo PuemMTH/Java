@@ -12,6 +12,7 @@ public class _work1{
     }
 }
 ```
+
 ```JAVA
 import java.util.Scanner;
 
