@@ -1,4 +1,4 @@
-<p align="center"><img src="https://www.img.in.th/images/80e8cffa4d7061b6bbfec486121d92b0.png" alt="80e8cffa4d7061b6bbfec486121d92b0.png" border="0" /></p>
+<img src="https://raw.githubusercontent.com/PuemMTH/Java/master/image/JAVA.png" />
 
 # Java
 
