@@ -1,6 +1,10 @@
+<p align="center"><img alt="Logo" src="https://www.img.in.th/images/80e8cffa4d7061b6bbfec486121d92b0.png"></p>
+
 # Lab 1 about moving from c language to java
 
 ## __WORK ONE
+<hr>
+
 ```JAVA
 import java.util.Scanner;
 
