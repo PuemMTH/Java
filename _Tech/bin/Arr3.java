@@ -10,7 +10,5 @@ public class Arr3 {
         arr[3] = new int[4] ;
         arr[4] = new int[5] ;
 
-
-
     }
 }
