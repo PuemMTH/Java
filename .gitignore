@@ -1,4 +1,4 @@
 *.log
 *.class
-/.vscode
+*.vscode
 *.dist
