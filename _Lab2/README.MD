@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/PuemMTH/Java/master/image/JAVA.png" />
 
-
+## __WORK 1
 ```JAVA
 public class _work1{
     public static void main(String[] args) {
@@ -13,7 +13,7 @@ public class _work1{
     }
 }
 ```
-
+## __WORK 2
 ```JAVA
 import java.util.Scanner;
 
@@ -36,7 +36,7 @@ public class _work2 {
 }
 
 ```
-
+## __WORK 3
 ```JAVA
 public class _work3 {
     public static void main(String[] args) {
@@ -51,7 +51,7 @@ public class _work3 {
     }
 }
 ```
-
+## __WORK 4
 ```JAVA
 import java.util.Scanner;
 
@@ -85,7 +85,7 @@ public class _work4 {
 }
 
 ```
-
+## __WORK 5
 ```JAVA
 import java.util.Scanner;
 
@@ -116,7 +116,7 @@ public class _work5 {
     }
 }
 ```
- 
+## __WORK 6
 ```JAVA
 import java.util.ArrayList;
 import java.util.Scanner;
