@@ -14,13 +14,11 @@ public class _Strings {
         System.out.println("LowerCase is /" + msg.toLowerCase() + "/");
         System.out.println("UpperCase is /" + msg.toUpperCase() + "/");
 
-
-        // String to int 
+        // String to int
         System.out.println(" ");
         String num0 = "123456";
         int parseInt = Integer.parseInt(num0);
         System.out.println("num is /" + parseInt + "/");
-
 
         // Int to String
         System.out.println(" ");

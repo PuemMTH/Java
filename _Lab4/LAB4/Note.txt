@@ -1,0 +1,52 @@
+import java.util.ArrayList;
+
+import BLANK.Account;
+import BLANK.Client;
+
+public class Main {
+    public static void main(String[] args) {
+        // Account account = new Account();
+        // Client client = new Client();
+
+
+        // System.out.println("Welcome to my program.");
+
+        // Account a = new Account(100, 500, 2);
+        // System.out.println(a.getBalance());
+
+        // a.deposit(100);
+        // System.out.println(a.getBalance());
+
+        // a.withdraw(200);
+        // System.out.println(a.getBalance());
+        Client std[] = new Client[2];
+        ArrayList<Client> aStd = new ArrayList<>();
+        /*
+            ชื่อ Jame Panter รหัสบัตรประชาชน 144556677 เบอร์โทรศัพท์ 0811151511 มีบัญชีสองบัญชี คือ 
+            1. เลขบัญชี 4450123 มีเงินจำนวณ 20,000 บาท อัตราดอกเบี้ย 1.5%
+            2. เลขบัญชี 4450295 มีเงินจำนวณ 90,000 บาท อัตราดอกเบี้ย 2.0%
+        */
+        std[0] = new Client(144556677, "Jame Panter", "0811151511");
+        std[0].AddAccount(new Account(4450123, 20000, 1.5));
+        std[0].AddAccount(new Account(4450295, 90000, 2.0));
+        /*
+            ชื่อ Camelo Antony รหัสบัตรประชาชน 122338899 เบอร์โทรศัพท์ 0899959599 มีบัญชีสองบัญชี คือ 
+            1. เลขบัญชี 4550234 มีเงินจำนวณ 10,000 บาท อัตราดอกเบี้ย 1.5% 
+            2. เลขบัญชี 4550379 มีเงินจำนวณ 80,000 บาท อัตราดอกเบี้ย 3.0%
+            3. เลขบัญชี 4550987 มีเงินจำนวณ 50,000 บาท อัตราดอกเบี้ย 4.0%
+        */
+        std[1] = new Client(122338899, "Camelo Antony", "0899959599");
+        std[1].AddAccount(new Account(4550234, 10000, 1.5));
+        std[1].AddAccount(new Account(4550379, 80000, 3.0));
+        std[1].AddAccount(new Account(4550987, 50000, 4.0));
+
+        // showAccount toString() 
+        System.out.println(std[0].getStrings()+std[1].getStrings());
+
+        double max = std[1].allAccounts.get(0).getBalance();
+        std[1].allAccounts.get(0).withdraw(max);
+        std[1].allAccounts.get(2).withdraw(max);
+        std[1].RemoveAccount(std[1].allAccounts.get(0).getId());
+
+    }
+}

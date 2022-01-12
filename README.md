@@ -18,7 +18,7 @@ public class [filename] {
 ## Note
 
 ```JAVA
-public class bin {
+public class [filename] {
     public static void main(String[] args) {
         String A = "Hello World";
         for (int i = 0; i < A.length(); i++) {
@@ -28,5 +28,4 @@ public class bin {
         System.out.println(A.contains(B));
     }
 }
-
 ```
