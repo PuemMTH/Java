@@ -4,7 +4,6 @@
 # Lab 1 about moving from c language to java
 
 ## __WORK ONE
-<hr>
 
 ```JAVA
 import java.util.Scanner;
