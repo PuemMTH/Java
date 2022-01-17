@@ -1,10 +1,9 @@
-import java.util.ArrayList;
-
 import BLANK.Account;
 import BLANK.Client;
-
+import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
+
         System.out.println("Welcome to my program.");
 
         System.out.println("\nArrayList  ==============================\n");
@@ -40,6 +39,7 @@ public class Main {
         std[1].allAccounts.get(0).withdraw(max);
         std[1].allAccounts.get(2).withdraw(max);
         std[1].RemoveAccount(std[1].allAccounts.get(0).getId());
-
     }
+
+
 }

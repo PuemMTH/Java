@@ -1,3 +1,4 @@
+import java.beans.Statement;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -15,8 +16,9 @@ public class _work5 {
         }
     }
     public static void main(String[] args) {
-        
+
         ArrayList<Integer> arr = new ArrayList<Integer>();
+
         System.out.println("=====MENT=====");
         System.out.println("1) Add to back");
         System.out.println("2) Add at index");
@@ -82,6 +84,7 @@ public class _work5 {
             catch (Exception e){
                 System.out.println(e);
             }
+
         }
     }
 }

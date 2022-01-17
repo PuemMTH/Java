@@ -1,4 +1,4 @@
-package BLANK;
+package Bank;
 
 import java.util.ArrayList;
 
@@ -6,35 +6,35 @@ public class Client {
 	private int id;
     private String name;
     private String phone;
-    public ArrayList<Account> allAccounts = new ArrayList<Account>();
+    public ArrayList<Account> allAccount = new ArrayList<Account>();
 
     public Client(int id, String name, String phone){
         this.id = id;
         this.name = name;
         this.phone = phone;
-        allAccounts = new ArrayList<>();
+        allAccount = new ArrayList<>();
     }
 
     public boolean AddAccount(Account account){
-        allAccounts.add(account);
+        allAccount.add(account);
         return true;
     }
     
     public boolean RemoveAccount(int accountID){
-        for (int i = 0; i < this.allAccounts.size(); i++) {
-            if (this.allAccounts.get(i).getId() == accountID) {
+        for (int i = 0; i < this.allAccount.size(); i++) {
+            if (this.allAccount.get(i).getId() == accountID) {
                 System.out.println("Account ID : " + accountID + " had been removed.");
-                this.allAccounts.remove(i);
+                this.allAccount.remove(i);
                 return true;
             }
         }
         return false;
     }
     
-    public String getStrings() {
+    public String toString() {
         String ans = "";
         ans = "ID : "+this.id +", Name : "+this.name +", TEL : "+this.phone +"\n";
-        for(Account account : this.allAccounts){
+        for(Account account : this.allAccount){
             ans += "Account ID = "+account.getId() + ", Balance = "+account.getBalance()+", Interest Rate = " + account.getAnnualInterestRate() + "%\n";
         }
         return ans;
@@ -58,8 +58,8 @@ public class Client {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-    public ArrayList<Account> getAllAccounts() {
-        return this.allAccounts;
+    public ArrayList<Account> getAllAccount() {
+        return this.allAccount;
     }
 
 }
