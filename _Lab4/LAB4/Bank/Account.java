@@ -1,4 +1,4 @@
-package BLANK;
+package Bank;
 
 public class Account {
     private int id;
