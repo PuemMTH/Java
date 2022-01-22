@@ -1,15 +1,24 @@
 package game;
 
 public class unit {
+    // attributes
     private String name;
     private double hp;
     private double atk;
 
+    // constructor
     public unit(String name, double hp, double atk) {
         this.name = name;
         this.hp = hp;
         this.atk = atk;
     }
+
+    // method
+    public void attack(unit enemy) {
+        enemy.setHp(enemy.getHp() - this.atk);
+        System.out.println(this.name + " attacked " + enemy.getName() + " and " + enemy.getName() + " lost " + this.atk + " hp.");
+    }
+
     // getter setter
     public String getName() {
         return name;
@@ -29,10 +38,4 @@ public class unit {
     public void setAtk(double atk) {
         this.atk = atk;
     }
-    // method
-    public void attack(unit enemy) {
-        enemy.setHp(enemy.getHp() - this.atk);
-        System.out.println(this.name + " attacked " + enemy.getName() + " and " + enemy.getName() + " lost " + this.atk + " hp.");
-    }
-
 }

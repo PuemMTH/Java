@@ -5,6 +5,26 @@ public class Account {
     private double balance;
     private double annualInterestRate;
 
+    public Account(int id, double balance, double annualInterestRate) {
+        this.id = id;
+        this.balance = balance;
+        this.annualInterestRate = annualInterestRate;
+    }
+    
+    public void deposit(double flag) {
+        System.out.println("Deposit " + flag +" to account : " + this.id);
+        this.balance += flag;
+    }
+
+    public boolean withdraw(double flag) {
+        if(this.balance >= flag) {
+            this.balance -= flag;
+            System.err.println("Withdraw "+ flag +" form account ID : "+ this.id);
+            return true;
+        }
+        return false;
+    }
+
     public int getId() {
         return this.id;
     }
@@ -23,24 +43,4 @@ public class Account {
     public void setAnnualInterestRate(double annualInterestRate) {
         this.annualInterestRate = annualInterestRate;
     }
-
-    public Account(int id, double balance, double annualInterestRate) {
-        this.id = id;
-        this.balance = balance;
-        this.annualInterestRate = annualInterestRate;
-    }
-    
-    public void deposit(double flag) {
-        System.out.println("Deposit " + flag +" to account : " + this.id);
-        this.balance += flag;
-    }
-    public boolean withdraw(double flag) {
-        if(this.balance >= flag) {
-            this.balance -= flag;
-            System.err.println("Withdraw "+ flag +" form account ID : "+ this.id);
-            return true;
-        }
-        return false;
-    }
-
 }

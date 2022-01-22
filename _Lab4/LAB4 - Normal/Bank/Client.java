@@ -19,7 +19,7 @@ public class Client {
         allAccount.add(account);
         return true;
     }
-    
+
     public boolean RemoveAccount(int accountID){
         for (int i = 0; i < this.allAccount.size(); i++) {
             if (this.allAccount.get(i).getId() == accountID) {
