@@ -6,7 +6,7 @@ public class Main {
         System.out.println(A.getName() + " car created , Speed = "+ A.getSpeed());
         Car B = new Car("Yamaha", 80);
         System.out.println(B.getName() + " car created , Speed = "+ B.getSpeed());
-        
+
         A.speed_up(70);
         System.out.println(A.getName() + " car speed up , Speed = "+ A.getSpeed());
         A.speed_up(70);

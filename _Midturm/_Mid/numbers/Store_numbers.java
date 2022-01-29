@@ -11,27 +11,25 @@ public class Store_numbers {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
-        ArrayList<Integer> list = new ArrayList<Integer>();
+        ArrayList<Integer> list = new ArrayList<>();
         int lineInt;
-        
-            while(true){
+        while(true){
+            try{
                 System.out.print("Please input a number : ");
-                try{
-                    lineInt = sc.nextInt();
-                    if(lineInt >= 0 && !list.contains(lineInt)){
-                        list.add(lineInt);
-                    }else{
-                        System.out.println("The number already exists.");
-                    }
-                    if(lineInt < 0){ 
-                        System.out.println("Think you.");
-                        break;
-                    }
-                }catch(Exception e){
-                    System.out.println(e);
+                lineInt = sc.nextInt();
+                if(lineInt >= 0 && !list.contains(lineInt)){
+                    list.add(lineInt);
+                }else{
+                    System.out.println("The number already exists.");
                 }
-                allNumbers(list);
+                if(lineInt < 0){ 
+                    System.out.println("Think you.");
+                    break;
+                }
+            }catch(Exception e){
+                System.out.println(e);
             }
+            allNumbers(list);
+        }
     }
 }
