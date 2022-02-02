@@ -2,6 +2,7 @@ package Lib;
 
 public class Number {
     private int n;
+    
     public Number(int n) {
         this.n = n;
     }
@@ -10,6 +11,7 @@ public class Number {
     }
     public boolean isZero(){
         return this.n == 0;
+
     }
     public boolean isPositive() {
         return this.n > 0;
@@ -34,8 +36,8 @@ public class Number {
         }
         return true;
     }
-    public double Factorial() {
-        double ans = 1;
+    public int Factorial() {
+        int ans = 1;
         for (int i = 1; i <= this.n; i++) {
             ans *= i;
         }
@@ -47,8 +49,8 @@ public class Number {
     public double sqrt() {
         return Math.sqrt(this.n);
     }
-    public double sumOfDigits() {
-        double ans = 0;
+    public int sumOfDigits() {
+        int ans = 0;
         int n_catch = this.n;
         n_catch = Math.abs(n_catch);
         while (n_catch > 0) {
@@ -60,9 +62,7 @@ public class Number {
     public String Reverse() {
         String ans = "";
         int n_catch = this.n;
-
         while (n_catch > 0) {
-            // 987 % 10 = 7
             ans += n_catch % 10;
             n_catch /= 10;
         }
@@ -71,6 +71,7 @@ public class Number {
     public String divisibleBy(){
         String ans = "";
         int n_catch = this.n;
+        // 987
         for (int i = 1; i <= n_catch; i++) {
             if (n_catch % i == 0) {
                 ans += i + " ";
@@ -87,10 +88,32 @@ public class Number {
         }
         return ans;
     }
+    public String toHex() {
+        String ans = "";
+        int n_catch = this.n;
+        while (n_catch > 0) {
+            ans = (n_catch % 16) + ans;
+            n_catch /= 16;
+        }
+        return ans;
+    }
+    public String toOctal() {
+        String ans = "";
+        int n_catch = this.n;
+        while (n_catch > 0) {
+            ans = (n_catch % 8) + ans;
+            n_catch /= 8;
+        }
+        return ans;
+    }
+    public String toDecimal() {
+        return String.valueOf(this.n);
+    }
     public int getN() {
         return this.n;
     }
     public void setN(int n) {
         this.n = n;
     }
+
 }
