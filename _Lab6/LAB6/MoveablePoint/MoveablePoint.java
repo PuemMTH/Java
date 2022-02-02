@@ -34,19 +34,21 @@ public class MoveablePoint extends Point{
         double[] xySpeed = {this.xSpeed, this.ySpeed};
         return xySpeed;
     }
-
-    public void setSpeed(double xSpeed, double ySpeed) {
+    public void setXYSpeed(double xSpeed, double ySpeed) {
         this.xSpeed = xSpeed;
         this.ySpeed = ySpeed;
     }
+
     public double getXSpeed() {
         return this.xSpeed;
+    }
+    public void setXSpeed(double xSpeed) {
+        this.xSpeed = xSpeed;
     }
     public double getYSpeed() {
         return this.ySpeed;
     }
-    public void setXYSpeed(double xSpeed, double ySpeed) {
-        this.xSpeed = xSpeed;
+    public void setYSpeed(double ySpeed) {
         this.ySpeed = ySpeed;
     }
 }

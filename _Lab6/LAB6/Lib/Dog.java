@@ -6,7 +6,7 @@ public class Dog extends Animal{
         System.out.println("[ Dog Created ]");
     }
     public void print() { // Override
-        System.out.println("Dog : " + this.getName());
+        System.out.println("Dog : " + this.name);
     }
     public void greets() {
         System.out.println("Woof Woof !!!");
