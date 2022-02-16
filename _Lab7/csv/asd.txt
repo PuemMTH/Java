@@ -1,0 +1,15 @@
+public class Point 
+    private double x;
+    private double y;
+    public Point(double x,double y)
+    public Point()
+    public double Distance(Point des)
+    public double Distance(double x,double y)
+    public double Distance()
+    public String toString()
+    public void setXY(double x,double y)
+    public double[] getXY()
+    public double getX()
+    public void setX(double x)
+    public double getY()
+    public void setY(double y)
