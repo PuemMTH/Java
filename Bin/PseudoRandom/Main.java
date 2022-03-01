@@ -56,6 +56,7 @@ public class Main{
             }
             count++;
         }
+
         // Pseudo-Random Number
         // Modulus number   (m) : 123
         // Multiple number  (a) : 12
@@ -66,16 +67,18 @@ public class Main{
         // Output Number = 97
         // Output Number = 58
         // Output Number = 82
+
         if(count > 0){
             return;
         }
-
+        
         String load = Integer.toString(m);
         String load_catch = "1";
         for(int i = 0; i < load.length(); i++){
             load_catch += "0";
         }
-        System.out.println("(m): " + load_catch);
+        // System.out.println("(m): " + load_catch);
+        m = Integer.parseInt(load_catch);
 
         int x_catch = x;
         for(int i = 0; i < x_catch; i++){
@@ -83,6 +86,5 @@ public class Main{
             System.out.println("Output Number = " + n);
             x = n;
         }
-
     }
-}
+}   

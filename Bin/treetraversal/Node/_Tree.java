@@ -164,9 +164,6 @@ class mainTree implements ActionListener, MouseListener {
             InputTree.setEditable(false);
             BTEdits_Button.setIcon(OnClick_BTEdit);
             getOrder(InputTree.getText());
-            // InOrder.setText("A");
-            // PreOrder.setText("A");
-            // PostOrder.setText("A");
             InOrder.setText(tree.inorder(tree.root));
             PreOrder.setText(tree.preorder(tree.root));
             PostOrder.setText(tree.postorder(tree.root));

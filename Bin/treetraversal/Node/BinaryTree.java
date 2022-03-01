@@ -42,15 +42,33 @@ public class BinaryTree {
     public void NodeClear(Node node) {
         if (node == null)
             return;
+
         NodeClear(node.left);
         NodeClear(node.right);
         node = null;
     }
     public void insert(BinaryTree Tree, HashMap<String, String> map) {
-        for (Map.Entry<String, String> entry : map.entrySet()) {
-            String key = entry.getKey();
-            String value = entry.getValue();
-            System.out.println(key + " " + value);
+        if(Tree.root == null){
+            Tree.root = new Node(map.get("root"));
+            return;
+        }
+        Node node = Tree.root;
+        while(true){
+            if(node.item.compareTo(map.get("root")) > 0){
+                if(node.left == null){
+                    node.left = new Node(map.get("root"));
+                    return;
+                }
+                node = node.left;
+            }else if(node.item.compareTo(map.get("root")) < 0){
+                if(node.right == null){
+                    node.right = new Node(map.get("root"));
+                    return;
+                }
+                node = node.right;
+            }else{
+                return;
+            }
         }
     }
 }
