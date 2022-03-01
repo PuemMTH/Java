@@ -119,6 +119,7 @@ class mainTree implements ActionListener, MouseListener {
 
     public void getOrder(String args){
         count++;
+        // Ex. args = T:a,TL:b,TLR:e,TLL:d,TLLR:h,TR:c,TRL:f,TRR:g
         System.out.println("==============>"+count+"<==============");
         tree = new BinaryTree();
         // tree.NodeClear(tree.root);
@@ -139,13 +140,19 @@ class mainTree implements ActionListener, MouseListener {
         String[] str = args.split(",");
         String[] str2 = new String[2];
         
+        // Add to HashMap (key "T" : value "a")
         for (String string : str) {
             str2 = string.split(":");
             map.put(str2[0], str2[1]);
         }
-        // map.forEach((k, v) -> {
-        //     System.out.println(k + ":" + v + ":");
-        // });
+        System.out.println();
+        map.forEach(
+            (k, v) -> {
+                System.out.print(k + "," + v + " ");
+            }
+            
+        );
+        // Add to Tree
         tree.insert(tree, map);
     }
 
