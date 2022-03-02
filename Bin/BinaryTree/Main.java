@@ -5,4 +5,5 @@ public class Main {
         // new _Tree();
         new Binary();
     }
+    // del *.class && cd Node && del *.class && cd .. && javac Main.java && java Main
 }

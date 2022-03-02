@@ -9,13 +9,15 @@ public class Main{
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Modulus number   (m) : ");
-        m = sc.nextInt(); // m < a c x 
+        m = sc.nextInt(); 
         System.out.print("Multiple number  (a) : ");
-        a = sc.nextInt(); // a >= 2 < m
+        a = sc.nextInt(); 
         System.out.print("Increment number (c) : ");
-        c = sc.nextInt(); // c >= 0 < m
+        c = sc.nextInt();
         System.out.print("Seed number      (x) : ");
-        x = sc.nextInt(); // x >= 0 < m
+        x = sc.nextInt(); 
+        System.out.print("Number of numbers to generate : ");
+        n = sc.nextInt(); 
 
         if(m<a || m<c || m<x){
             if(m<a){
@@ -56,17 +58,10 @@ public class Main{
             }
             count++;
         }
-
-        // Pseudo-Random Number
-        // Modulus number   (m) : 123
-        // Multiple number  (a) : 12
-        // Increment number (c) : 1
-        // Seed number      (x) : 4
-        // (m): 1000
-        // Output Number = 49
-        // Output Number = 97
-        // Output Number = 58
-        // Output Number = 82
+        if(n<0){
+            System.out.println("n must be greater than 0");
+            count++;
+        }
 
         if(count > 0){
             return;
@@ -77,14 +72,14 @@ public class Main{
         for(int i = 0; i < load.length(); i++){
             load_catch += "0";
         }
-        // System.out.println("(m): " + load_catch);
         m = Integer.parseInt(load_catch);
 
-        int x_catch = x;
-        for(int i = 0; i < x_catch; i++){
-            n = ((a * x) + c) % m;
-            System.out.println("Output Number = " + n);
-            x = n;
+        int ans;
+        for(int i = 0; i < n; i++){
+            ans = ((a * x) + c) % m;
+            System.out.println("Output Number = " + ans);
+            c = ans;
         }
+
     }
 }   
