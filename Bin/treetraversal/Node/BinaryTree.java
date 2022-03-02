@@ -40,66 +40,88 @@ public class BinaryTree {
     public void NodeClear(Node node) {
         if (node == null)
             return;
-
         NodeClear(node.left);
         NodeClear(node.right);
         node = null;
     }
+
     public void insert(BinaryTree Tree, HashMap<String, String> map) {
         HashMap<String, String> maps = map;
         Node node = Tree.root;
-        // if(node == null){
-        //     node = new Node(map.get("T"));
-        //     return;
+
+        String str_key = map.get(map.keySet().toArray()[0]);
+        Node cur = Tree.root;
+        Node newNode = new Node(maps.get(str_key));
+        // for(int i = 0; i < str_key.length(); i++) {
+        //     if(str_key.equals("L")) {
+        //         if(cur.left == null) {
+        //             cur.left = newNode;
+        //         }else {
+        //             cur = cur.left;
+        //         }
+        //     }
         // }
 
-        // if key is "T" then insert value into root
-        if (maps.get("T") != null) {
-            node = new Node(maps.get("T"));
-            Tree.root = node;
-            maps.remove("T");
-        }
-        for(int i = 0; i < maps.size(); i++) {
-            if(maps.get("TL") != null) {
-                node.left = new Node(maps.get("TL"));
-                maps.remove("TL");
-            }
-            if(maps.get("TR") != null) {
-                node.right = new Node(maps.get("TR"));
-                maps.remove("TR");
-            }
-            if(maps.get("TRR") != null) {
-                node.right.right = new Node(maps.get("TRR"));
-                maps.remove("TRR");
-            }
-            if(maps.get("TRL") != null) {
-                node.right.left = new Node(maps.get("TRL"));
-                maps.remove("TRL");
-            }
-            if(maps.get("TLR") != null) {
-                node.left.right = new Node(maps.get("TLR"));
-                maps.remove("TLR");
-            }
-            if(maps.get("TLL") != null) {
-                node.left.left = new Node(maps.get("TLL"));
-                maps.remove("TLL");
-            }
-            if(maps.get("TLLR") != null) {
-                node.left.left.right = new Node(maps.get("TLLR"));
-                maps.remove("TLLR");
-            }
+        // for i in str_key:
+        //     if i == 'L':
+        //         if cur.left == None:
+        //             cur.left = newNode
+        //             newNode.parent = cur
+        //         else:
+        //             cur = cur.left
+        //     if i == 'R':
+        //         if cur.right == None:
+        //             cur.right = newNode
+        //             newNode.parent = cur
+        //         else:
+        //             cur = cur.right
 
-        }
 
-        
-        // if key is "L" then insert value into left
-        System.out.println();
-        maps.forEach(
-            (k, v) -> {
-                System.out.print(k + "," + v + " ");
-            }
-        );
-        System.out.println();
+        // if (maps.get("T") != null) {
+        //     node = new Node(maps.get("T"));
+        //     Tree.root = node;
+        //     maps.remove("T");
+        // }
+        // for(int i = 0; i < maps.size(); i++) {
+        //     // if(maps.get("TL") != null) {
+        //     //     node.left = new Node(maps.get("TL"));
+        //     //     maps.remove("TL");
+        //     // }
+        //     // if(maps.get("TR") != null) {
+        //     //     node.right = new Node(maps.get("TR"));
+        //     //     maps.remove("TR");
+        //     // }
+        //     // if(maps.get("TRR") != null) {
+        //     //     node.right.right = new Node(maps.get("TRR"));
+        //     //     maps.remove("TRR");
+        //     // }
+        //     // if(maps.get("TRL") != null) {
+        //     //     node.right.left = new Node(maps.get("TRL"));
+        //     //     maps.remove("TRL");
+        //     // }
+        //     // if(maps.get("TLR") != null) {
+        //     //     node.left.right = new Node(maps.get("TLR"));
+        //     //     maps.remove("TLR");
+        //     // }
+        //     // if(maps.get("TLL") != null) {
+        //     //     node.left.left = new Node(maps.get("TLL"));
+        //     //     maps.remove("TLL");
+        //     // }
+        //     // if(maps.get("TLLR") != null) {
+        //     //     node.left.left.right = new Node(maps.get("TLLR"));
+        //     //     maps.remove("TLLR");
+        //     // }
+        //     // ...
+        // }
+        // System.out.println();
+        // maps.forEach(
+        //     (k, v) -> {
+        //         System.out.print(k + "," + v + " ");
+        //     }
+        // );
+        // System.out.println();
+    }
+    public void RecursiveInsert(BinaryTree Tree, HashMap<String, String> map) {
 
     }
 }
