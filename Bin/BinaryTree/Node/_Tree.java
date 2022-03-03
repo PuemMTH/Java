@@ -2,6 +2,7 @@ package Node;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class _Tree {
@@ -122,8 +123,6 @@ class mainTree implements ActionListener, MouseListener {
         // Ex. args = T:a,TL:b,TLR:e,TLL:d,TLLR:h,TR:c,TRL:f,TRR:g
         System.out.println("==============>"+count+"<==============");
         tree = new BinaryTree();
-        // tree.NodeClear(tree.root);
-        HashMap<String, String> map = new HashMap<>();
         // Delete all space
         for (int i = 0; i < args.length(); i++) {
             if (args.charAt(i) == ' ') {
@@ -138,22 +137,16 @@ class mainTree implements ActionListener, MouseListener {
         }
         // Split
         String[] str = args.split(",");
-        String[] str2 = new String[2];
-        
-        // Add to HashMap (key "T" : value "a")
         for (String string : str) {
-            str2 = string.split(":");
-            map.put(str2[0], str2[1]);
+            System.out.println(string);
         }
-        System.out.println();
-        map.forEach(
-            (k, v) -> {
-                System.out.print(k + "," + v + " ");
-            }
-            
-        );
-        // Add to Tree
-        tree.insert(tree, map);
+        // Split :
+        String Key[];
+        for (int i = 0; i < str.length; i++) {
+            Key = str[i].split(":");
+            tree.insert(Key[0],Key[1]);
+        }
+
     }
 
     @Override

@@ -1,4 +1,6 @@
 package Node;
+import java.security.Key;
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class BinaryTree {
@@ -45,83 +47,28 @@ public class BinaryTree {
         node = null;
     }
 
-    public void insert(BinaryTree Tree, HashMap<String, String> map) {
-        HashMap<String, String> maps = map;
-        Node node = Tree.root;
-
-        String str_key = map.get(map.keySet().toArray()[0]);
-        Node cur = Tree.root;
-        Node newNode = new Node(maps.get(str_key));
-        // for(int i = 0; i < str_key.length(); i++) {
-        //     if(str_key.equals("L")) {
-        //         if(cur.left == null) {
-        //             cur.left = newNode;
-        //         }else {
-        //             cur = cur.left;
-        //         }
-        //     }
-        // }
-
-        // for i in str_key:
-        //     if i == 'L':
-        //         if cur.left == None:
-        //             cur.left = newNode
-        //             newNode.parent = cur
-        //         else:
-        //             cur = cur.left
-        //     if i == 'R':
-        //         if cur.right == None:
-        //             cur.right = newNode
-        //             newNode.parent = cur
-        //         else:
-        //             cur = cur.right
-
-
-        if (maps.get("T") != null) {
-            node = new Node(maps.get("T"));
-            Tree.root = node;
-            maps.remove("T");
+    public void insert(String Key, String Value) {
+        Node root = this.root;
+        for(int i = 0; i < Key.length(); i++) {
+            if(this.root == null && Key.length() == 1 && Key.equals("T")){
+                this.root = new Node(Value);
+                break;
+            }
+            if(Key.charAt(i) == 'L'){
+                if(root.left == null){
+                    root.left = new Node(Value);
+                }else{
+                    root = root.left;
+                }
+            }
+            if(Key.charAt(i) == 'R'){
+                if(root.right == null){
+                    root.right = new Node(Value);
+                }else{
+                    root = root.right;
+                }
+            }
         }
-        for(int i = 0; i < maps.size(); i++) {
-            if(maps.get("TL") != null) {
-                node.left = new Node(maps.get("TL"));
-                maps.remove("TL");
-            }
-            if(maps.get("TR") != null) {
-                node.right = new Node(maps.get("TR"));
-                maps.remove("TR");
-            }
-            if(maps.get("TRR") != null) {
-                node.right.right = new Node(maps.get("TRR"));
-                maps.remove("TRR");
-            }
-            if(maps.get("TRL") != null) {
-                node.right.left = new Node(maps.get("TRL"));
-                maps.remove("TRL");
-            }
-            if(maps.get("TLR") != null) {
-                node.left.right = new Node(maps.get("TLR"));
-                maps.remove("TLR");
-            }
-            if(maps.get("TLL") != null) {
-                node.left.left = new Node(maps.get("TLL"));
-                maps.remove("TLL");
-            }
-            if(maps.get("TLLR") != null) {
-                node.left.left.right = new Node(maps.get("TLLR"));
-                maps.remove("TLLR");
-            }
-            // ...
-        }
-        // System.out.println();
-        // maps.forEach(
-        //     (k, v) -> {
-        //         System.out.print(k + "," + v + " ");
-        //     }
-        // );
-        // System.out.println();
-    }
-    public void RecursiveInsert(BinaryTree Tree, HashMap<String, String> map) {
 
     }
 }
