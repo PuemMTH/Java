@@ -5,9 +5,7 @@ public class Main{
         System.out.println("Pseudo-Random Number");
         int m,a,c,x=0,n;
         int count = 0;
-        
         Scanner sc = new Scanner(System.in);
-
         System.out.print("Modulus number   (m) : ");
         m = sc.nextInt(); 
         System.out.print("Multiple number  (a) : ");
@@ -66,20 +64,21 @@ public class Main{
         if(count > 0){
             return;
         }
-        
+
         String load = Integer.toString(m);
         String load_catch = "1";
-        for(int i = 0; i < load.length(); i++){
+        for(int i = 0; i < load.length()-1; i++){
             load_catch += "0";
         }
+        
         m = Integer.parseInt(load_catch);
 
         int ans;
         for(int i = 0; i < n; i++){
             ans = ((a * x) + c) % m;
             System.out.println("Output Number = " + ans);
-            c = ans;
+            x = ans;
         }
 
     }
-}   
+}

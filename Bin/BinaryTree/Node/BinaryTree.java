@@ -77,42 +77,42 @@ public class BinaryTree {
         //             cur = cur.right
 
 
-        // if (maps.get("T") != null) {
-        //     node = new Node(maps.get("T"));
-        //     Tree.root = node;
-        //     maps.remove("T");
-        // }
-        // for(int i = 0; i < maps.size(); i++) {
-        //     // if(maps.get("TL") != null) {
-        //     //     node.left = new Node(maps.get("TL"));
-        //     //     maps.remove("TL");
-        //     // }
-        //     // if(maps.get("TR") != null) {
-        //     //     node.right = new Node(maps.get("TR"));
-        //     //     maps.remove("TR");
-        //     // }
-        //     // if(maps.get("TRR") != null) {
-        //     //     node.right.right = new Node(maps.get("TRR"));
-        //     //     maps.remove("TRR");
-        //     // }
-        //     // if(maps.get("TRL") != null) {
-        //     //     node.right.left = new Node(maps.get("TRL"));
-        //     //     maps.remove("TRL");
-        //     // }
-        //     // if(maps.get("TLR") != null) {
-        //     //     node.left.right = new Node(maps.get("TLR"));
-        //     //     maps.remove("TLR");
-        //     // }
-        //     // if(maps.get("TLL") != null) {
-        //     //     node.left.left = new Node(maps.get("TLL"));
-        //     //     maps.remove("TLL");
-        //     // }
-        //     // if(maps.get("TLLR") != null) {
-        //     //     node.left.left.right = new Node(maps.get("TLLR"));
-        //     //     maps.remove("TLLR");
-        //     // }
-        //     // ...
-        // }
+        if (maps.get("T") != null) {
+            node = new Node(maps.get("T"));
+            Tree.root = node;
+            maps.remove("T");
+        }
+        for(int i = 0; i < maps.size(); i++) {
+            if(maps.get("TL") != null) {
+                node.left = new Node(maps.get("TL"));
+                maps.remove("TL");
+            }
+            if(maps.get("TR") != null) {
+                node.right = new Node(maps.get("TR"));
+                maps.remove("TR");
+            }
+            if(maps.get("TRR") != null) {
+                node.right.right = new Node(maps.get("TRR"));
+                maps.remove("TRR");
+            }
+            if(maps.get("TRL") != null) {
+                node.right.left = new Node(maps.get("TRL"));
+                maps.remove("TRL");
+            }
+            if(maps.get("TLR") != null) {
+                node.left.right = new Node(maps.get("TLR"));
+                maps.remove("TLR");
+            }
+            if(maps.get("TLL") != null) {
+                node.left.left = new Node(maps.get("TLL"));
+                maps.remove("TLL");
+            }
+            if(maps.get("TLLR") != null) {
+                node.left.left.right = new Node(maps.get("TLLR"));
+                maps.remove("TLLR");
+            }
+            // ...
+        }
         // System.out.println();
         // maps.forEach(
         //     (k, v) -> {
