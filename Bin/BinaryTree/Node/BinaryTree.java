@@ -1,7 +1,4 @@
 package Node;
-import java.security.Key;
-import java.util.Arrays;
-import java.util.HashMap;
 
 public class BinaryTree {
     public Node root;
@@ -47,6 +44,32 @@ public class BinaryTree {
         node = null;
     }
 
+    public void isOrder(BinaryTree tree,String args) {
+            // Delete all space
+            for (int i = 0; i < args.length(); i++) {
+                if (args.charAt(i) == ' ') {
+                    args = args.substring(0, i) + args.substring(i + 1);
+                }
+            }
+            // Delete all \\n
+            for (int i = 0; i < args.length(); i++) {
+                if (args.charAt(i) == '\n') {
+                    args = args.substring(0, i) + args.substring(i + 1);
+                }
+            }
+            // Split "T:a","TR:b",....
+            String[] str = args.split(",");
+            for (String string : str) {
+                System.out.println(string);
+            }
+            // Split :
+            String Key[];
+            for (int i = 0; i < str.length; i++) {
+                Key = str[i].split(":");
+                tree.insert(Key[0],Key[1]);
+            }
+    }
+
     public void insert(String Key, String Value) {
         Node root = this.root;
         for(int i = 0; i < Key.length(); i++) {
@@ -69,6 +92,6 @@ public class BinaryTree {
                 }
             }
         }
-
     }
+
 }

@@ -24,9 +24,7 @@ public class Binary {
         BT.Add(95);
         BT.Add(105);
         BT.Add(115);
-
         BT.PrintTree(BT.root," ", true);
-        
     }
     public void test(int i){
         System.out.println("Start "+i);
@@ -37,40 +35,16 @@ public class Binary {
         System.out.println("End "+i);
     }
 }
-
 class Node{
     public int data;
     public Node leftNode;
     public Node rightNode;
-
-    public int getData(){
-        return data;
-    }
-    public void setData(int data){
-        this.data = data;
-    }
-    public Node getLeftNode(){
-        return leftNode;
-    }
-    public void setLeftNode(Node leftNode){
-        this.leftNode = leftNode;
-    }
-    public Node getRightNode(){
-        return rightNode;
-    }
-    public void setRightNode(Node rightNode){
-        this.rightNode = rightNode;
-    }
-
 }
-
 class BinaryTree{
     public Node root;
-
     public void Add(int Value){
         Node Parent = null;
         Node tmp = this.root;
-
         while(tmp != null){
             Parent = tmp;
             if(Value < tmp.data){
@@ -81,10 +55,8 @@ class BinaryTree{
                 return;
             }
         }
-
         Node NewNode = new Node();
         NewNode.data = Value;
-
         if(this.root == null){
             this.root = NewNode;
         }else{
@@ -97,9 +69,7 @@ class BinaryTree{
         }
         return;
     }
-
     public void PrintTree(Node parent, String indent, boolean last){
-
         System.out.println(indent + "+- " + parent.data);
         indent += last ? "   " : "|  ";
         if(parent.leftNode != null && parent.rightNode != null){
@@ -112,13 +82,6 @@ class BinaryTree{
         else if(parent.rightNode != null){
             PrintTree(parent.rightNode, indent, true);
         }
-    }
-
-    public Node getRoot(){
-        return root;
-    }
-    public void setRoot(Node root){
-        this.root = root;
     }
 }
 
