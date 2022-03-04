@@ -12,9 +12,10 @@ public class BinaryTree {
         inorder = "";
         preorder = "";
     }
+
     public String postorder(Node node) {
         if (node == null)
-            return "";
+            return null;
         postorder(node.left);
         postorder(node.right);
         postorder += node.item + " ";
@@ -45,29 +46,29 @@ public class BinaryTree {
     }
 
     public void isOrder(BinaryTree tree,String args) {
-            // Delete all space
-            for (int i = 0; i < args.length(); i++) {
-                if (args.charAt(i) == ' ') {
-                    args = args.substring(0, i) + args.substring(i + 1);
-                }
+        // Delete all space
+        for (int i = 0; i < args.length(); i++) {
+            if (args.charAt(i) == ' ') {
+                args = args.substring(0, i) + args.substring(i + 1);
             }
-            // Delete all \\n
-            for (int i = 0; i < args.length(); i++) {
-                if (args.charAt(i) == '\n') {
-                    args = args.substring(0, i) + args.substring(i + 1);
-                }
+        }
+        // Delete all \\n
+        for (int i = 0; i < args.length(); i++) {
+            if (args.charAt(i) == '\n') {
+                args = args.substring(0, i) + args.substring(i + 1);
             }
-            // Split "T:a","TR:b",....
-            String[] str = args.split(",");
-            for (String string : str) {
-                System.out.println(string);
-            }
-            // Split :
-            String Key[];
-            for (int i = 0; i < str.length; i++) {
-                Key = str[i].split(":");
-                tree.insert(Key[0],Key[1]);
-            }
+        }
+        // Split "T:a","TR:b",....
+        String[] str = args.split(",");
+        for (String string : str) {
+            System.out.println(string);
+        }
+        // Split :
+        String Key[];
+        for (int i = 0; i < str.length; i++) {
+            Key = str[i].split(":");
+            tree.insert(Key[0],Key[1]);
+        }
     }
 
     public void insert(String Key, String Value) {
