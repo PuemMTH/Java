@@ -1,4 +1,5 @@
-package Node;
+package TreeTraversal;
+
 public class Node {
     public String item;
     public Node left, right;
@@ -8,4 +9,5 @@ public class Node {
         left = null;
         right = null;
     }
+
 }

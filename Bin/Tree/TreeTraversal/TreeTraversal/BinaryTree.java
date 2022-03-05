@@ -1,4 +1,4 @@
-package Node;
+package TreeTraversal;
 
 public class BinaryTree {
     public Node root;
@@ -36,13 +36,6 @@ public class BinaryTree {
         preorder(node.left);
         preorder(node.right);
         return preorder;
-    }
-    public void NodeClear(Node node) {
-        if (node == null)
-            return;
-        NodeClear(node.left);
-        NodeClear(node.right);
-        node = null;
     }
 
     public void isOrder(BinaryTree tree,String args) {
