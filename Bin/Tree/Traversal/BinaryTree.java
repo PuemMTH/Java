@@ -2,8 +2,8 @@ class Node {
     int key;
     Node left, right;
 
-    public Node(int item) {
-        key = item;
+    public Node(int key) {
+        this.key = key;
         left = right = null;
     }
 }
@@ -31,6 +31,15 @@ class BinaryTree {
         printPreorder(node.left);
         printPreorder(node.right);
     }
+    void PrintTree(Node node) {
+        if (node == null) return;
+        System.out.println("\nPostorder traversal of binary tree is");
+        printPostorder(node);
+        System.out.println("\nInorder traversal of binary tree is");
+        printInorder(node);
+        System.out.println("\nPreorder traversal of binary tree is");
+        printPreorder(node);
+    }
     void printPostorder() {
         printPostorder(root);
     }
@@ -49,12 +58,7 @@ class BinaryTree {
         tree.root.left.left = new Node(4);
         tree.root.left.right = new Node(5);
 
-        tree.printPreorder();
-        System.out.println();
-        tree.printInorder();
-        System.out.println();
-        tree.printPostorder();
-        System.out.println();
+        tree.PrintTree(tree.root);
 
     }
 }
