@@ -9,7 +9,7 @@ public class BinaryTree {
     // new Node[10];
 
     public BinaryTree(){
-        // root = null;
+        root = null;
     }
 
     public void insert(String keys){

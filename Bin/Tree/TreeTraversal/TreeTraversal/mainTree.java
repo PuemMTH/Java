@@ -3,13 +3,7 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class _mainUI {
-    public _mainUI(boolean isShow) {
-        new mainTree(isShow);
-    }
-}
-
-class mainTree implements ActionListener, MouseListener {
+public class mainTree implements ActionListener, MouseListener{
     JFrame f;
     Container cp;
     JTextArea ShowTree,InputTree;
@@ -27,11 +21,8 @@ class mainTree implements ActionListener, MouseListener {
 
     int count = 0;
     BinaryTree tree = null;
-    boolean isShow;
 
-    public mainTree(boolean isShow) {
-        this.isShow = isShow;
-
+    public mainTree() {
         f = new JFrame();
         cp = f.getContentPane();
         cp.setLayout(null);
@@ -81,7 +72,7 @@ class mainTree implements ActionListener, MouseListener {
         InputTree.setFont(new Font("Arial", Font.ITALIC, 15));
         InputTree.setForeground(Color.BLACK);
         cp.add(InputTree);
- 
+
         // Background
         bg.setImage(bg.getImage().getScaledInstance(590, 590, Image.SCALE_REPLICATE));
         JLabel Background = new JLabel(bg);
@@ -92,7 +83,7 @@ class mainTree implements ActionListener, MouseListener {
         cp.setBackground(Color.gray);
         f.setTitle("Mochi");
         f.setSize(600, 600);
-        f.setVisible(isShow);
+        f.setVisible(true);
         f.setResizable(false);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setLocationRelativeTo(null);
@@ -103,11 +94,7 @@ class mainTree implements ActionListener, MouseListener {
         // Ex. args = T:a,TL:b,TLR:e,TLL:d,TLLR:h,TR:c,TRL:f,TRR:g
         System.out.println("==============>"+count+"<==============");
         tree = new BinaryTree();
-        if(isShow == true){
-            tree.isOrder(tree, args);
-        }else{
-            
-        }
+        tree.isOrder(tree, args);
     }
 
     @Override

@@ -1,6 +1,6 @@
 package TreeTraversal;
 
-public class BinaryTree {
+public class BinaryTree{
     public Node root;
     String postorder;
     String inorder;
@@ -15,7 +15,7 @@ public class BinaryTree {
 
     public String postorder(Node node) {
         if (node == null)
-            return null;
+            return "";
         postorder(node.left);
         postorder(node.right);
         postorder += node.item + " ";
@@ -53,9 +53,6 @@ public class BinaryTree {
         }
         // Split "T:a","TR:b",....
         String[] str = args.split(",");
-        for (String string : str) {
-            System.out.println(string);
-        }
         // Split :
         String Key[];
         for (int i = 0; i < str.length; i++) {
