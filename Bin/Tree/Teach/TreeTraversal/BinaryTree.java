@@ -19,15 +19,16 @@ public class BinaryTree{
         postorder(node.left);
         postorder(node.right);
         postorder += node.item + " ";
-        return postorder;
+        return this.postorder;
     }
     public String inorder(Node node) {
-        if (node == null)
+        if (node == null){
             return null;
+        }
         inorder(node.left);
         inorder += node.item + " ";
         inorder(node.right);
-        return inorder;
+        return this.inorder;
     }
     public String preorder(Node node) {
         if (node == null)
@@ -35,7 +36,7 @@ public class BinaryTree{
         preorder += node.item + " ";
         preorder(node.left);
         preorder(node.right);
-        return preorder;
+        return this.preorder;
     }
 
     public void isOrder(BinaryTree tree,String args) {
@@ -84,5 +85,5 @@ public class BinaryTree{
             }
         }
     }
-
+    
 }

@@ -1,5 +1,3 @@
-
-
 public class Data {
     char ch;
     boolean flag = true;
