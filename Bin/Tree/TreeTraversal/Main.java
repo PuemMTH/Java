@@ -1,7 +1,8 @@
 import TreeTraversal.*;
 public class Main {
     public static void main(String[] args) {
-        new _mainUI(false);
+        System.setProperty("file.encoding", "UTF-8");
+        new _mainUI(true);
     }
 }
 
@@ -15,4 +16,5 @@ class _mainUI {
     }
 }
 
-// del *.class && cd Node && del *.class && cd .. && javac Main.java && java Main
+// Ex. args = T:a,TL:b,TLR:e,TLL:d,TLLR:h,TR:c,TRL:f,TRR:g
+// del *.class && cd TreeTraversal && del *.class && cd .. && javac Main.java && java Main

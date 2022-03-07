@@ -89,12 +89,19 @@ public class mainTree implements ActionListener, MouseListener{
         f.setLocationRelativeTo(null);
     }
 
+    String post = "",pre = "",in = "";
+
     public void getOrder(String args){
         count++;
         // Ex. args = T:a,TL:b,TLR:e,TLL:d,TLLR:h,TR:c,TRL:f,TRR:g
-        System.out.println("==============>"+count+"<==============");
+        System.out.println("=========================>"+count+"<=========================");
         tree = new BinaryTree();
+        System.out.println(args);
         tree.isOrder(tree, args);
+        pre = tree.preorder(tree.root);
+        post = tree.postorder(tree.root);
+        in = tree.inorder(tree.root);
+        System.out.println("PostOrder : "+post+"\n"+"PreOrder  : "+pre+"\n"+"InOrder   : "+in);
     }
 
     @Override
@@ -104,7 +111,6 @@ public class mainTree implements ActionListener, MouseListener{
 
     @Override
     public void mouseClicked(MouseEvent e) {
-
         if(e.getSource() == BTEdits_Button){
             InputTree.setEditable(true);
         }
@@ -112,11 +118,10 @@ public class mainTree implements ActionListener, MouseListener{
             InputTree.setEditable(false);
             BTEdits_Button.setIcon(OnClick_BTEdit);
             getOrder(InputTree.getText());
-            InOrder.setText(tree.inorder(tree.root));
-            PreOrder.setText(tree.preorder(tree.root));
-            PostOrder.setText(tree.postorder(tree.root));
+            InOrder.setText(in);
+            PreOrder.setText(pre);
+            PostOrder.setText(in);
         }
-
     }
 
     @Override

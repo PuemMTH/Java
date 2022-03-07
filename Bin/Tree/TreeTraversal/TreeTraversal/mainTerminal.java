@@ -12,8 +12,8 @@ public class mainTerminal {
         System.out.print("Input Tree: ");
         args = sc.nextLine();
         tree.isOrder(tree, args);
-        System.out.println("Postorder: " + tree.postorder(tree.root));
-        System.out.println("Inorder: " + tree.inorder(tree.root));
-        System.out.println("Preorder: " + tree.preorder(tree.root));
+        System.out.println("Postorder : " + tree.postorder(tree.root));
+        System.out.println("Inorder   : " + tree.inorder(tree.root));
+        System.out.println("Preorder  : " + tree.preorder(tree.root));
     }
 }
