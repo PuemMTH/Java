@@ -26,7 +26,6 @@ public class BinaryTree {
         for(int i = 0; i < size; i++){
             // Node node,left,right;
             // node = nodes.get(i);
-
             if(2*i+1 < size){
                 nodes.get(i).left = nodes.get(2*i+1);
                 nodes.get(2*i+1).parent = nodes.get(i);

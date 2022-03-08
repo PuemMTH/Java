@@ -62,8 +62,7 @@ class BinaryTree{
         }else{
             if(NewNode.data > Parent.data){
                 Parent.rightNode = NewNode;
-            }
-            else{
+            }else{
                 Parent.leftNode = NewNode;
             }
         }
@@ -84,5 +83,3 @@ class BinaryTree{
         }
     }
 }
-
-

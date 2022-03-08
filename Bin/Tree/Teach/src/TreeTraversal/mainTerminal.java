@@ -1,4 +1,5 @@
-package TreeTraversal;
+package src.TreeTraversal;
+
 import java.util.Scanner;
 
 public class mainTerminal {
