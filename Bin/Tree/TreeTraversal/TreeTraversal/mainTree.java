@@ -11,13 +11,14 @@ public class mainTree implements ActionListener, MouseListener{
     JLabel ButtonEdit,ButtonUpdate, OnClick_BTEdits, OnClick_BTUpdates;
     JLabel BTEdits,BTUpdates;
     JButton BTEdits_Button,BTUpdates_Button;
-    ImageIcon bg = new ImageIcon("./img/Background.png");
-    ImageIcon BTEdit = new ImageIcon("./img/BTEdit.png");
-    ImageIcon OnClick_BTEdit = new ImageIcon("./img/OnClick_BTEdit.png");
-    ImageIcon OnEntered_BTEdit = new ImageIcon("./img/OnEntered_BTEdit.png");
-    ImageIcon BTUpdate = new ImageIcon("./img/BTUpdate.png");
-    ImageIcon OnClick_BTUpdate = new ImageIcon("./img/OnClick_BTUpdate.png");
-    ImageIcon OnEntered_BTUpdate = new ImageIcon("./img/OnEntered_BTUpdate.png");
+    // ImageIcon bg = new ImageIcon(".//img//Background.png");
+    ImageIcon bg = new ImageIcon(getClass().getClassLoader().getResource("img/Background.png"));
+    ImageIcon BTEdit = new ImageIcon(getClass().getClassLoader().getResource("img/BTEdit.png"));
+    ImageIcon OnClick_BTEdit = new ImageIcon(getClass().getClassLoader().getResource("img/OnClick_BTEdit.png"));
+    ImageIcon OnEntered_BTEdit = new ImageIcon(getClass().getClassLoader().getResource("img/OnEntered_BTEdit.png"));
+    ImageIcon BTUpdate = new ImageIcon(getClass().getClassLoader().getResource("img/BTUpdate.png"));
+    ImageIcon OnClick_BTUpdate = new ImageIcon(getClass().getClassLoader().getResource("img/OnClick_BTUpdate.png"));
+    ImageIcon OnEntered_BTUpdate = new ImageIcon(getClass().getClassLoader().getResource("img/OnEntered_BTUpdate.png"));
 
     int count = 0;
     BinaryTree tree = null;
@@ -81,6 +82,7 @@ public class mainTree implements ActionListener, MouseListener{
 
         f.setIconImage(new ImageIcon(getClass().getResource("/img/Logo.png")).getImage());
         cp.setBackground(Color.gray);
+        // f.setUndecorated(true);
         f.setTitle("Mochi");
         f.setSize(600, 600);
         f.setVisible(true);
