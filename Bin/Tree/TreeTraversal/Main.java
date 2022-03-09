@@ -15,5 +15,4 @@ class _mainUI {
     }
 }
 
-// Ex. args = ASD
 // del *.class && cd TreeTraversal && del *.class && cd .. && javac Main.java && java Main
