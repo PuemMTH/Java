@@ -39,6 +39,7 @@ public class BinaryTree{
     }
 
     public void isOrder(BinaryTree tree,String args) {
+        // T:a,TL:b,TLR:e,TLL:d,TLLR:h,TR:c,TRL:f,TRR:g
         // Delete all space
         for (int i = 0; i < args.length(); i++) {
             if (args.charAt(i) == ' ') {
