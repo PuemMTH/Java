@@ -122,7 +122,7 @@ public class mainTree implements ActionListener, MouseListener{
             getOrder(InputTree.getText());
             InOrder.setText(in);
             PreOrder.setText(pre);
-            PostOrder.setText(in);
+            PostOrder.setText(post);
         }
     }
 
