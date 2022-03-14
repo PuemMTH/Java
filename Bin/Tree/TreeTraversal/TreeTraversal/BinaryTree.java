@@ -53,36 +53,45 @@ public class BinaryTree{
             }
         }
         // Split "T:a","TR:b",....
-        String[] str = args.split(",");
-        // Split :
-        String Key[];
-        for (int i = 0; i < str.length; i++) {
-            Key = str[i].split(":");
-            tree.insert(Key[0],Key[1]);
+        try{
+            String[] str = args.split(",");
+            String Key[];
+            for (int i = 0; i < str.length; i++) {
+                Key = str[i].split(":");
+                tree.insert(Key[0],Key[1]);
+            }
+        }catch(Exception e){
+            System.out.println("Input Error!");
+            return;
         }
+        // Split :
     }
 
     public void insert(String Key, String Value) {
-        Node root = this.root;
-        for(int i = 0; i < Key.length(); i++) {
-            if(this.root == null && Key.length() == 1 && Key.equals("T")){
-                this.root = new Node(Value);
-                break;
-            }
-            if(Key.charAt(i) == 'L'){
-                if(root.left == null){
-                    root.left = new Node(Value);
-                }else{
-                    root = root.left;
+        try{
+            Node root = this.root;
+            for(int i = 0; i < Key.length(); i++) {
+                if(this.root == null && Key.length() == 1 && Key.equals("T")){
+                    this.root = new Node(Value);
+                    break;
+                }
+                if(Key.charAt(i) == 'L'){
+                    if(root.left == null){
+                        root.left = new Node(Value);
+                    }else{
+                        root = root.left;
+                    }
+                }
+                if(Key.charAt(i) == 'R'){
+                    if(root.right == null){
+                        root.right = new Node(Value);
+                    }else{
+                        root = root.right;
+                    }
                 }
             }
-            if(Key.charAt(i) == 'R'){
-                if(root.right == null){
-                    root.right = new Node(Value);
-                }else{
-                    root = root.right;
-                }
-            }
+        }catch (Exception e){
+            System.out.println("Error: " + e);
         }
     }
 
