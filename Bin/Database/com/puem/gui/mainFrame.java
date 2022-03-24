@@ -3,21 +3,20 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-
 public class mainFrame {
     JFrame f;
     Container cp;
     JMenuBar mb;
     JMenu menu, submenu;  
-    JMenuItem i1, i2, i3, i4, i5;  
+    JMenuItem i1, i2, i3, i4, i5;
+    ImageIcon bg_star = new ImageIcon(getClass().getClassLoader().getResource("com/puem/gui/image/ganyu.jpg"));
     static Point compCoords;
+
     public mainFrame() {
         f = new JFrame();
         cp = f.getContentPane();
         cp.setLayout(null);
-        cp.setBackground(new Color( 12, 12, 12));
+        cp.setBackground(new Color(12,12,12));
 
         JLabel closeButton = new JLabel("X");
         closeButton.setBounds(560+20, 10, 20, 20);
@@ -109,22 +108,11 @@ public class mainFrame {
                 
             }
         });
-        // add left panel
-        JPanel leftPanel = new JPanel();
-        leftPanel.setBounds(0, 40, 200, 600);
-        // leftPanel.setBackground(Color.BLACK);
-        leftPanel.setForeground(Color.blue);
-        leftPanel.setBackground(Color.black);
-        cp.add(leftPanel);
 
-        // add in leftPanel Text MenuBar
-        JTextArea textMenuBar = new JTextArea();
-        textMenuBar.setBounds(0, 0, 200, 40);
-        textMenuBar.setBackground(Color.black);
-        textMenuBar.setForeground(Color.white);
-        textMenuBar.setText("Menu Bar");
-        textMenuBar.setEditable(false);
-        leftPanel.add(textMenuBar);
+        // ImageIcon imageIcon = new ImageIcon("com/puem/gui/image/ganyu.jpg");
+        JLabel Background = new JLabel(bg_star);
+        Background.setBounds(0, 0, bg_star.getIconWidth(), bg_star.getIconHeight());
+        cp.add(Background);
 
         f.setTitle("Terminal");
         f.setSize(600, 600);
