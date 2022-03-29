@@ -27,6 +27,22 @@ public class Customer extends UserAccount {
         BuyOrder.add(move);
     }
 
+    public void showBuyOrder() {
+        System.out.print(this.getName() + " buy order: [ ");
+        for (Movie move : BuyOrder) {
+            System.out.print("\""+move.getName() +"\" ");
+        }
+        System.out.println(" ]");
+    }
+
+    public void showRateOrder() {
+        System.out.print(this.getName() + " rate order: [ ");
+        for (Movie move : RateOrder.keySet()) {
+            System.out.print("\""+move.getName() +": " + RateOrder.get(move) + "\" ");
+        }
+        System.out.println(" ]");
+    }
+
     public ArrayList<Movie> getBuyOrder() {
         return BuyOrder;
     }

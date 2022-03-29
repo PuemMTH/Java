@@ -2,7 +2,7 @@ import TreeTraversal.*;
 
 public class Main {
     public static void main(String[] args) {
-        new _mainUI(true);
+        new _mainUI(false);
     }
 }
 

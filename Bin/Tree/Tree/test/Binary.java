@@ -3,27 +3,26 @@ package test;
 public class Binary {
     public Binary() {
         BinaryTree BT = new BinaryTree();
-        BT.Add(50);
-        BT.Add(20);
-        BT.Add(70);
-        BT.Add(30);
-        BT.Add(110);
-        BT.Add(10);
-        BT.Add(15);
-        BT.Add(60);
-        BT.Add(90);
-        BT.Add(150);
-        BT.Add(5);
-        BT.Add(25);
-        BT.Add(35);
-        BT.Add(45);
-        BT.Add(55);
-        BT.Add(65);
-        BT.Add(75);
-        BT.Add(85);
-        BT.Add(95);
-        BT.Add(105);
-        BT.Add(115);
+        BT.Add(726);
+        BT.Add(885);
+        BT.Add(768);
+        BT.Add(439);
+        BT.Add(266);
+        BT.Add(865);
+        BT.Add(28);
+        BT.Add(59);
+        BT.Add(206);
+        BT.Add(645);
+        BT.Add(888);
+        BT.Add(879);
+        BT.Add(546);
+        BT.Add(225);
+        BT.Add(348);
+        BT.Add(899);
+        BT.Add(286);
+        BT.Add(605);
+        BT.Add(408);
+        BT.Add(119);
         BT.PrintTree(BT.root," ", true);
     }
     public void test(int i){

@@ -24,7 +24,7 @@ public class Movie {
     }
 
     public String toString() {
-        return "Movie: " + name + " " + date + " " + rate + " " + calcPrice;
+        return "Movie: " + name + " " + date + " " + Double.toString(rate).substring(0,4) + " " + calcPrice;
     }
 
     public String getDate() {
