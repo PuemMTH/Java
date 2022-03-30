@@ -27,6 +27,7 @@ public class _BorderLayout extends JFrame {
         button = new JButton("5 (LINE_END)");
         getContentPane().add(button, BorderLayout.LINE_END);
 
+        setLocationRelativeTo(null);
         setVisible(true);
 
 	}

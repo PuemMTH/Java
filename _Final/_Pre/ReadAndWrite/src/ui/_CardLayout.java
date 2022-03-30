@@ -14,23 +14,8 @@ public class _CardLayout extends JFrame {
 	CardLayout cards;
     JPanel cardPanel;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				_CardLayout frame = new _CardLayout();
-				frame.setVisible(true);
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
 	public _CardLayout() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		setBounds(100, 100, 450, 300);
 		setTitle("ThaiCreate.Com GUI Tutorial");
 		
@@ -81,6 +66,9 @@ public class _CardLayout extends JFrame {
         getContentPane().add(mainPanel,BorderLayout.NORTH);
         getContentPane().add(cardPanel,BorderLayout.CENTER);
 
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+		setLocationRelativeTo(null);
 
 	}
 	

@@ -15,6 +15,7 @@ public class _GridBagLayout {
         f.pack();
         f.setResizable(false);
         f.setVisible(true);
+        f.setLocationRelativeTo(null);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }

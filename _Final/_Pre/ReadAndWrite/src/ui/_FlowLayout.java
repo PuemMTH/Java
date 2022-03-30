@@ -20,6 +20,7 @@ public class _FlowLayout extends JFrame {
         contentPane2.add(new JButton("Button 10"));
         frame.pack();
         frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
