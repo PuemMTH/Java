@@ -1,9 +1,9 @@
 import File.*;
-import ui.Layout;
+import ui.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
         // new ReadAndWrite();
-        new Layout();
+        new Read();
     }
 }

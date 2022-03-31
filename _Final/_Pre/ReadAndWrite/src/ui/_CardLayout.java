@@ -49,7 +49,6 @@ public class _CardLayout extends JFrame {
 		JButton btn3 = new JButton("Button in Panel 2");
 		panel2.add(btn3);
 
-        
         // Panel 3
         JPanel panel3 = new JPanel();
 		JButton btn4 = new JButton("Button in Panel 3");

@@ -4,10 +4,13 @@ import java.io.*;
 import java.util.Scanner;
 
 public class ReadAndWrite {
+    
     FileReader fr = null;
     BufferedReader br = null;
+
     FileWriter fw = null;
     BufferedWriter bw = null;
+    
     Scanner sc = null;
     public ReadAndWrite(){
         try {
@@ -23,22 +26,19 @@ public class ReadAndWrite {
             while(line != null){
                 String[] arr_s = line.split(",");
                 for(int i = 0; i < arr_s.length ; i++){
-                    // System.out.print(arr_s[i] + " ");
                     bw.write(arr_s[i] + "\t");
                 }
+                bw.write(arr_s[0] + "\t");
+                bw.write(arr_s[1] + "\t");
+                bw.write(arr_s[2] + "\t");
                 bw.newLine();
-                // System.out.println(arr_s);
-                // System.out.println();
                 line = br.readLine();
             }
             System.out.println("Done!");
-            br.close();
-            fr.close();
-            bw.close();
-            fw.close();
+            br.close(); fr.close();
+            bw.close(); fw.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 }
-
